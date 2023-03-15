@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital@1&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+::selection {
+  background: #ffe987 !important;
+  color: rgb(33, 37, 41) !important;
+}
+
+.logo {
+    width: 100px !important;
+}
+
+.item {
+  transition: .5s ease-in-out;
+}
+
+.item:hover {
+  filter: brightness(80%);
+}
+
+.line-1{
+  position: relative;
+  top: 50%;  
+  width: 24em;
+  margin: 3% auto;
+  border-right: 2px solid rgba(0, 0, 0, 0.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+animation: typewriter 4s steps(44) 1s 1 normal both,
+           blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+from{width: 0;}
+to{width: 11em;}
+}
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(0, 0, 0, 0.75);}
+to{border-right-color: transparent;}
+}
+
+.main-body {
+  display: flex;
+}
+
+.graph {
+  margin-top: 4% !important;
+  margin-left: 15%;
+  width: 30% !important;
+  transform: scale(1.03) !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.4s, transform 0.4s !important;
+  height: 600px !important; 
+  border: 1px solid black !important;
+}
+
+.graph:hover {
+  transform: scale(1.20) !important;
+  opacity: 1 !important;
+}
+
+.card {
+  margin-top: 4% !important;
+  margin-left: 15% !important;
+  width: 30% !important;
+  transform: scale(1.03) !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.4s, transform 0.4s !important;
+  border: 1px solid black !important;
+}
+
+.card:hover {
+  transform: scale(1.20) !important;
+  opacity: 1 !important;
+}
+
+#menu p,
+#menu input,
+#menu .closer,
+#menu input:checked~.opener {
+  display: none !important;
+}
+
+#menu input:checked~p,
+#menu input:checked~.closer {
+  display: block !important;
+}
+
+
+.work-text {
+  font-family: 'Tinos', serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.work-image {
+  margin-left: 35%;
+  padding-bottom: 4px;
+}
+
+.work-imagesmall{
+  height: 75px;
+  margin-left: 35%;
+  padding-bottom: 4px;
+}
