@@ -37,8 +37,7 @@
 
 /* Animation */
 .anim-typewriter{
-animation: typewriter 4s steps(44) 1s 1 normal both,
-           blinkTextCursor 500ms steps(44) infinite normal;
+animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
 }
 @keyframes typewriter{
 from{width: 0;}
@@ -62,9 +61,37 @@ to{border-right-color: transparent;}
   transition: opacity 0.4s, transform 0.4s !important;
   height: 600px !important; 
   border: 1px solid black !important;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
 .graph:hover {
+  transform: scale(1.20) !important;
+  opacity: 1 !important;
+}
+
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.graph2 {
+  margin-top: 4% !important;
+  width: 50% !important;
+  transform: scale(1.03) !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.4s, transform 0.4s !important;
+  height: 600px !important; 
+  border: 1px solid black !important;
+}
+
+.graph2:hover {
   transform: scale(1.20) !important;
   opacity: 1 !important;
 }
@@ -77,11 +104,29 @@ to{border-right-color: transparent;}
   opacity: 0.7 !important;
   transition: opacity 0.4s, transform 0.4s !important;
   border: 1px solid black !important;
+  animation-duration: 3s !important;
+  animation: sliden !important;
+  -webkit-animation: slidein 3s !important;
+  -moz-animation: slidein 3s !important;
+  -o-animation: slidein 3s !important;
+  -ms-animation: slidein 3s !important;
 }
 
 .card:hover {
   transform: scale(1.20) !important;
   opacity: 1 !important;
+}
+
+/* Animation for Graph and Card */
+@keyframes slidein {
+  from {
+    margin-left: -90%;
+    width: 300%;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 #menu p,
@@ -115,4 +160,39 @@ to{border-right-color: transparent;}
   height: 75px;
   margin-left: 35%;
   padding-bottom: 4px;
+}
+
+.scratch-visualization {
+  animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+
+/* Animation for Scratch */
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
