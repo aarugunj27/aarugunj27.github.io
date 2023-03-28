@@ -4,7 +4,7 @@ const context = canvas.getContext("2d");
 
 const frameCount = 694;
 const currentFrame = index => (
-    `https://aarugunj27.github.io/static/images/visualization/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`
+    `https://aarugunj27.github.io/static/images/visualization/${index.toString().padStart(5, '0')}.jpg`
 )
 
 const preloadImages = () => {
