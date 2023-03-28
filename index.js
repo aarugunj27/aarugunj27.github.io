@@ -2,7 +2,7 @@ const html = document.documentElement
 const canvas = document.getElementById('hero-lightpass');
 const context = canvas.getContext("2d");
 
-const frameCount = 140;
+const frameCount = 694;
 const currentFrame = index => (
     `https://aarugunj27.github.io/static/images/visualization/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`
 )
