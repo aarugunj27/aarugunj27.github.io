@@ -69,7 +69,7 @@ to{border-right-color: transparent;}
 
 .graph {
   margin-top: 4% !important;
-  margin-left: 15%;
+  margin-left: 12.5%;
   width: 30% !important;
   transform: scale(1.03) !important;
   opacity: 0.7 !important;
@@ -104,11 +104,21 @@ to{border-right-color: transparent;}
   transition: opacity 0.4s, transform 0.4s !important;
   height: 600px !important; 
   border: 1px solid black !important;
+  margin-left: 25%;
 }
 
 .graph2:hover {
   transform: scale(1.20) !important;
   opacity: 1 !important;
+}
+
+.graph2-heading {
+  text-align: center;
+}
+
+.graph2-text {
+  font-size: 20px;
+  text-align: center;
 }
 
 .card {
