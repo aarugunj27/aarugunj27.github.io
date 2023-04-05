@@ -43,7 +43,6 @@ body {
   width: 24em;
   margin: 3% auto;
   border-right: 2px solid rgba(0, 0, 0, 0.75);
-  font-size: 180%;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -61,6 +60,39 @@ to{width: 11em;}
 @keyframes blinkTextCursor{
 from{border-right-color: rgba(0, 0, 0, 0.75);}
 to{border-right-color: transparent;}
+}
+
+.names {
+  text-align: center;
+  margin-top: 0;
+  -webkit-animation: fadein 7s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 7s; /* Firefox < 16 */
+  -ms-animation: fadein 7s; /* Internet Explorer */
+  -o-animation: fadein 7s; /* Opera < 12.1 */
+  animation: fadein 7s;
+}
+
+@keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
 }
 
 .main-body {
@@ -188,6 +220,14 @@ to{border-right-color: transparent;}
 }
 
 .scratch-visualization {
+  margin-top: 4% !important;
+  width: 50% !important;
+  height: 600px !important; 
+  border: 1px solid black !important;
+  margin-left: 25%;
+}
+
+.scratch-visualization-container {
   animation: fadeIn 3s;
   -webkit-animation: fadeIn 3s;
   -moz-animation: fadeIn 3s;
